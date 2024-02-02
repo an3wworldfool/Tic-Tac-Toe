@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq1yaqr3gsww4"]
+
+[ext_resource type="Texture2D" uid="uid://dd1eq7jskvtig" path="res://assets/image_processing20210620-8688-1m2obdd (1).png" id="1_h5jv0"]
+
+[node name="PieceX" type="Node2D"]
+scale = Vector2(0.6, 0.6)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-16, -48)
+texture = ExtResource("1_h5jv0")
+centered = false
+hframes = 3
+vframes = 3
+frame = 2
