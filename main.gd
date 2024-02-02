@@ -13,7 +13,9 @@ func _process(delta):
 
 func _on_board_player_moved():
 	
-	if($Board.winner != ""):
+	if $Board.winner == "tie":
+		$MessageLabel.text = "EVERYBODY LOSES!!"
+	elif($Board.winner != ""):
 		$MessageLabel.text = "Player "+$Board.winner+" WINS!!!"
 		
 	else:

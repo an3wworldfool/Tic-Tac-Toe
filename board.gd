@@ -84,6 +84,8 @@ func _process(delta):
 		player_moved.emit()
 		add_child(piece)
 		
+		computer_move()
+		
 	
 
 func verify_win_cond():
@@ -98,5 +100,21 @@ func verify_win_cond():
 		winner=board_array[0][0]
 	elif(board_array[0][2] == board_array[1][1] && board_array[1][1] == board_array[2][0] && board_array[2][0] != null):
 		winner=board_array[0][2]
+		
+	# if there is a winner, even if no space available, don't do the tie check
+	if winner != "":
+		return
 	
+	var space_available = false
+	for x in 3:
+		for y in 3:
+			if (board_array[y][x] == null):
+				space_available = true
+	
+	if space_available == false:
+		winner="tie"
+	
+func computer_move():
+	
+	pass
 	
