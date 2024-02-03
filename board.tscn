@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c1b76laaundo5"]
+[gd_scene load_steps=6 format=3 uid="uid://c1b76laaundo5"]
 
 [ext_resource type="Script" path="res://board.gd" id="1_obeck"]
 [ext_resource type="PackedScene" uid="uid://dq1yaqr3gsww4" path="res://piece_x.tscn" id="2_6o3ds"]
 [ext_resource type="PackedScene" uid="uid://dyvi6aeh6x3ua" path="res://piece_o.tscn" id="3_t7pfs"]
 [ext_resource type="AudioStream" uid="uid://p4qr4sbarqvm" path="res://assets/card game sfx pack by olex mazur/Cards/Play/GP_PutDown_1.wav" id="4_0122p"]
+[ext_resource type="AudioStream" uid="uid://buk1hpcrmwvf" path="res://assets/card game sfx pack by olex mazur/UI/Notifications/GP_Begin_Turn_1.wav" id="5_7v2e6"]
 
 [node name="Board" type="Node2D"]
 script = ExtResource("1_obeck")
@@ -32,3 +33,6 @@ default_color = Color(0, 0, 0, 1)
 
 [node name="PlacementSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_0122p")
+
+[node name="WinSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_7v2e6")

@@ -111,6 +111,7 @@ func verify_win_cond():
 		
 	# if there is a winner, even if no space available, don't do the tie check
 	if winner != "":
+		$WinSound.play()
 		return
 	
 	var space_available = false
