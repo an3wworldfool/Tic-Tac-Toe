@@ -110,8 +110,13 @@ func verify_win_cond():
 		winner=board_array[0][2]
 		
 	# if there is a winner, even if no space available, don't do the tie check
-	if winner != "":
+	if winner == "X":
+		$BattleMusic.stop()
 		$WinSound.play()
+		return
+	if winner == "O":
+		$BattleMusic.stop()
+		$LoseSound.play()
 		return
 	
 	var space_available = false
@@ -121,6 +126,8 @@ func verify_win_cond():
 				space_available = true
 	
 	if space_available == false:
+		$BattleMusic.stop()
+		$LoseSound.play()
 		winner="tie"
 	
 func computer_move():

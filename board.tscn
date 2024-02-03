@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://c1b76laaundo5"]
+[gd_scene load_steps=9 format=3 uid="uid://c1b76laaundo5"]
 
 [ext_resource type="Script" path="res://board.gd" id="1_obeck"]
 [ext_resource type="PackedScene" uid="uid://dq1yaqr3gsww4" path="res://piece_x.tscn" id="2_6o3ds"]
 [ext_resource type="PackedScene" uid="uid://dyvi6aeh6x3ua" path="res://piece_o.tscn" id="3_t7pfs"]
-[ext_resource type="AudioStream" uid="uid://p4qr4sbarqvm" path="res://assets/card game sfx pack by olex mazur/Cards/Play/GP_PutDown_1.wav" id="4_0122p"]
-[ext_resource type="AudioStream" uid="uid://buk1hpcrmwvf" path="res://assets/card game sfx pack by olex mazur/UI/Notifications/GP_Begin_Turn_1.wav" id="5_7v2e6"]
+[ext_resource type="Texture2D" uid="uid://baur1y8j421lu" path="res://assets/tictacfoe1920x1080.png" id="4_0wnk6"]
+[ext_resource type="AudioStream" uid="uid://bi4igrdnaf3gh" path="res://assets/card game sfx pack by olex mazur/Buff/GP_Attack_Up_2.wav" id="5_di0nv"]
+[ext_resource type="AudioStream" uid="uid://cfcs8k8lqu0g6" path="res://assets/Victory.mp3" id="6_578so"]
+[ext_resource type="AudioStream" uid="uid://baowpqxr8ykg1" path="res://assets/Death.mp3" id="7_7wwby"]
+[ext_resource type="AudioStream" uid="uid://c48fm4mmd3ka4" path="res://assets/Action 3 (Loop).mp3" id="7_cepun"]
 
 [node name="Board" type="Node2D"]
 script = ExtResource("1_obeck")
@@ -12,32 +15,44 @@ pieceX_scene = ExtResource("2_6o3ds")
 pieceO_scene = ExtResource("3_t7pfs")
 
 [node name="Background" type="Sprite2D" parent="."]
-scale = Vector2(1.01113, 1.01113)
-texture = ExtResource("4_rtba4")
+scale = Vector2(1.01948, 1.01948)
+texture = ExtResource("4_0wnk6")
 centered = false
 
 [node name="LineH1" type="Line2D" parent="."]
 points = PackedVector2Array(250, 250, 850, 250)
 width = 20.0
-default_color = Color(0.721569, 0.690196, 0.811765, 0.301961)
+default_color = Color(0.827451, 0.862745, 0.929412, 0.243137)
 
 [node name="LineH2" type="Line2D" parent="."]
 points = PackedVector2Array(250, 400, 850, 400)
 width = 20.0
-default_color = Color(0.721569, 0.690196, 0.811765, 0.301961)
+default_color = Color(0.827451, 0.862745, 0.929412, 0.243137)
 
 [node name="LineV1" type="Line2D" parent="."]
 points = PackedVector2Array(450, 100, 450, 550)
 width = 20.0
-default_color = Color(0.721569, 0.690196, 0.811765, 0.301961)
+default_color = Color(0.827451, 0.862745, 0.929412, 0.243137)
 
 [node name="LineV2" type="Line2D" parent="."]
 points = PackedVector2Array(650, 100, 650, 550)
 width = 20.0
-default_color = Color(0.721569, 0.690196, 0.811765, 0.301961)
+default_color = Color(0.827451, 0.862745, 0.929412, 0.243137)
 
 [node name="PlacementSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_0122p")
+stream = ExtResource("5_di0nv")
+volume_db = -19.074
+bus = &"SFX"
 
 [node name="WinSound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_7v2e6")
+stream = ExtResource("6_578so")
+bus = &"SFX"
+
+[node name="LoseSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_7wwby")
+bus = &"SFX"
+
+[node name="BattleMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_cepun")
+autoplay = true
+bus = &"Music"
