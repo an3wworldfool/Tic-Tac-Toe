@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dfs51fnl6x7ek"
+path="res://.godot/imported/GP_End_Turn_1.wav-ae0c25e37456279c1a782f6de892cb95.sample"
+
+[deps]
+
+source_file="res://assets/card game sfx pack by olex mazur/UI/Notifications/GP_End_Turn_1.wav"
+dest_files=["res://.godot/imported/GP_End_Turn_1.wav-ae0c25e37456279c1a782f6de892cb95.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
