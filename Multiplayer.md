@@ -1,5 +1,7 @@
 # Basics of Multiplayer in Godot 4
 
+From https://www.youtube.com/watch?v=e0JLO_5UgQo
+
 Two modes: *peer-to-peer* or *server-hosted* are possible.
 
 Make a scene `MultiplayerScene` (saved as `MultiplayerScene.tscn`) with a basic control node `Control` and sub three buttons: `Host`, `Join`, `Start Game`. Make a new GD script and call it `MultiplayerController.gd`. Connect the button signals for the 3 buttons `button_down` to MultiplayerController.
