@@ -6,6 +6,8 @@ Two modes: *peer-to-peer* or *server-hosted* are possible.
 
 Make a scene `MultiplayerScene` (saved as `MultiplayerScene.tscn`) with a basic control node `Control` and sub three buttons: `Host`, `Join`, `Start Game`. Make a new GD script and call it `MultiplayerController.gd`. Connect the button signals for the 3 buttons `button_down` to MultiplayerController.
 
+**Note:** multiplayer is a property, which is a reference to the MultiplayerAPI instance configured for it by the scene tree. Initially, every node is configured with the same default MultiplayerAPI object.
+
 ```python
 extends Control
 @export var address = "127.0.0.1"
